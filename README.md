@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a mock Twitter application, consistes of 2 pages. Welcome page and twitter page. Displays the loadedtweets on clicking Loads tweets and routes to tweet page, where you can:
+1. search for an tweet.
+2. Filter by categories.
+3. Post a tweet. 
+4. Set character limit for each word in the tweet
+5. Change layout of tweets display
 
-## Available Scripts
 
-In the project directory, you can run:
+## Notes
 
-### `npm start`
+1. Alert system is implemented as a common, global component which can be used by any API call on success and error. Currently the application has 2 API calls which use the alert system to convey the status. As the application expands it can also be used on other API calls, or actions.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. You can currently search on the name field (i.e using the name of the tweet). It can be implemented to use any/more fields
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+3. Instead of handling navigation using actions. I have used react-router https://www.npmjs.com/package/react-router-dom to handle routing. It provides a clean way to handle navigation and also works with browser back button.
 
-### `npm test`
+4.  For TweetLengthFormatter, initially length formatter is unslected on selecting a length the formatter is applied. If the tweet length formatter should be initially set, that can also be done easily by changing the intial value. For testing purpose added a new TweetLengthFormatter of 5 character. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Used Higher Order Component for TweetLayoutPrefernce to select layout as card or list.
 
-### `npm run build`
+6. Used React hooks to implement and validate "Post new tweet" feature.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. App is made a container because, fetching tweet data is made from the App as it is the common parent component for Tweets and TweetsCounter which both require tweets. 
