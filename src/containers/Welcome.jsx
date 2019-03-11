@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Welcome } from '../components';
-import * as actions from '../actions';
 
 export class WelcomeContainer extends React.Component {
     render() {

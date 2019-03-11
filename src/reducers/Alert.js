@@ -6,7 +6,6 @@ const initialstate = {
 };
 
 export function AlertReducer(state = initialstate, action){
-    //const { payload } = action;
     const { alertStatus, alertText} = action;
     switch(action.type){
         case ADD_ALERT: {            

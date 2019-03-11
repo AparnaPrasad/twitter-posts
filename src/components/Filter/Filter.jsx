@@ -16,11 +16,7 @@ export class Filter extends React.Component {
                 </div>
                 <select onChange={(e)=>{setCategory(e.target.value)}}>
                     {categories.map((category, index) => <option key={index} value={category}>{category}</option>)
-                    }
-                    
-                    {/*<option value="volvo">React</option>
-                    <option value="saab">CryptoCurrency</option>*/
-                    }
+                    }                   
                 </select>
             </div>
         );

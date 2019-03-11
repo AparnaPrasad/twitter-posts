@@ -17,7 +17,7 @@ export const addAlertInterface = ({alertStatus, alertText}) => {
     dispatch(addAlert({alertStatus, alertText}));
         setTimeout(()=>{
             dispatch(removeAlert());
-        }, 10000);
+        }, 5000);
     }
 };
 

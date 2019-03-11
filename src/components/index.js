@@ -9,3 +9,4 @@ export * from './TweetPreferences/TweetLengthPreference.jsx';
 export * from './App/App.jsx';
 export * from './FormItems/FormItems.jsx';
 export * from './TweetsOuterLayout/TweetsOuterLayout.jsx';
+export * from './DisplayTweets/DisplayTweets';

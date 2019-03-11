@@ -29,10 +29,11 @@ export function fetchTweets() {
     return (dispatch) => {
         dispatch(fetchTweetsBegin());
         TweetService.getTweets().then((data)=>{
-            dispatch(fetchTweetsSuccess(data));
-            dispatch(getCategories(data));
+            dispatch(fetchTweetsSuccess(data));            
+            dispatch(getCategories(data));            
         }).catch(()=>{
-            dispatch(fetchTweetsFailure('error'))
+            dispatch(fetchTweetsFailure('error'));
+            dispatch(addAlertInterface({alertStatus: ApiAlertStatus.FAILURE, alertText: 'Error loading tweets'}));
         });
 
     }

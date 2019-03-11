@@ -9,17 +9,11 @@ export class Alert extends React.Component {
         return (
             <div className="AlertComponent">
                <div className={`alert ${alertClass}`} role="alert">
-                    Tweet successfully posted!
+                    {alertText}
                     <button type="button" className="close" aria-label="Close" onClick={() => removeAlert()}>
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                {/*<div className="alert alert-danger" role="alert">
-                    Error posting tweet!
-                    <button type="button" className="close" aria-label="Close" >
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>*/}
             </div>
         );
     }

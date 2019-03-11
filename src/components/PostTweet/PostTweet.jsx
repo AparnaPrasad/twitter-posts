@@ -1,6 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import { Row, FormRow } from '../../components/';
-import { ApiAlertStatus } from '../../actions';
 
 export const PostTweet = (props) => {
     const category = useFormInput('', props.tweetLengthPreference);
